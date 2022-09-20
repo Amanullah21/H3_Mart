@@ -1,0 +1,13 @@
+.landing_container {
+  background-color: #5182d5;
+  width: 100%;
+  padding-left: 11%;
+  padding-top: 60px;
+  height: 200px;
+}
+.red{
+    color: red;
+}
+.green{
+    color: green;
+}
