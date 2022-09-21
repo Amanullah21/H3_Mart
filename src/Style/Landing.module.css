@@ -1,0 +1,23 @@
+.landing_container {
+  background-image: linear-gradient(to right, #4055b8, #63b3f5);
+  width: 89%;
+  padding: 60px 5% 0px;
+  padding-top: 60px;
+  height: 200px;
+}
+.landing_container_data {
+  display: flex;
+  padding-top: 20px;
+  gap: 8%;
+  line-height: 1.4285em;
+  color: whit;
+  font-size: 16px;
+  text-align: center;
+  flex-wrap: wrap;
+  display: flex;
+  margin: 1em -1.5em 1em;
+  justify-content: center;
+  color: #ffffff !important;
+  font-weight: 600;
+  
+}

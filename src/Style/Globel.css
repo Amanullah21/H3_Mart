@@ -1,13 +1,36 @@
-.landing_container {
-  background-color: #5182d5;
-  width: 100%;
-  padding-left: 11%;
-  padding-top: 60px;
-  height: 200px;
+body {
+  font-family: Lato, Helvetica, Arial, sans-serif !important;
 }
-.red{
-    color: red;
+.red {
+  color: red;
 }
-.green{
-    color: green;
+.green {
+  color: green;
+}
+.button {
+  background-color: #18c683;
+  border: none;
+  height: 37px;
+  width: fit-content;
+  color: white;
+  padding: 0px 20px;
+  margin-top: -5px;
+  transition: transform 0.2s ease 0s;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 15px -3px;
+  font-weight: 700;
+  text-align: center;
+  border-radius: 10em;
+  cursor: pointer;
+}
+.button:hover {
+  background-color: aliceblue;
+  color: black;
+}
+.special_effact_green {
+  transition: background 0.35s ease 0s;
+  background: rgba(24, 198, 131, 0.19);
+}
+.special_effact_pink {
+  transition: background 0.35s ease 0s;
+  background: rgba(244, 67, 54, 0.19);
 }

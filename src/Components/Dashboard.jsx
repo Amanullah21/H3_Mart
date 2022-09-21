@@ -17,10 +17,13 @@ const Dashboard = () => {
       )
       .catch((ele) => console.log(ele));
   };
-  console.log(data);
   data.filter((item) => item.rank <= 50);
   const viweMore = () => {
-    setPage(1);
+    if (data.length === 100) {
+      alert(`There are  ${data.length} data avilable in API`);
+    } else {
+      setPage(1);
+    }
   };
 
   const convertToInternationalCurrencySystem = (labelValue) => {
@@ -32,14 +35,16 @@ const Dashboard = () => {
       ? (Math.abs(Number(labelValue)) / 1.0e3).toFixed(2) + "K"
       : Math.abs(Number(labelValue));
   };
-const sortData=() =>{
-  console.log('aaa')
-}
+  const sortData = () => {
+    console.log("aaa");
+  };
   return (
     <div className={styled.dashboard_container}>
       <div>
         <div className={styled.dashboard_title_bar}>
-          <div onClick={sortData}>{"Rank"} <img src="da" alt="dasd" /></div>
+          <div onClick={sortData}>
+            {"Rank"} <img src="da" alt="dasd" />
+          </div>
           <div style={{ width: "300px" }}>{"Name"}</div>
           <div>{"Price"}</div>
           <div>{"Market Cap"}</div>
