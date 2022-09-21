@@ -13,12 +13,12 @@ const Footer = () => {
           <p>Rate Comparison</p>
           <p>Careers</p>
         </div>
-        <div>
+        <div className={styled.legal}>
           <div>LEGALS</div>
           <p>Terms of Service</p>
           <p>Privacy</p>
         </div>
-        <div>
+        <div className={styled.dec}>
           <div>DISCLAIMER</div>
           <p>
             Neither ShapeShift AG nor <br /> CoinCap are in any way <br />{" "}

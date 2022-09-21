@@ -71,66 +71,69 @@ const Dashboard = () => {
     }
   };
   return (
-    <div className={styled.dashboard_container}>
-      <div>
-        <div className={styled.dashboard_data}>
-          <div onClick={sortData}>
-            <img src="da" alt="Rank" /> {"Rank"}
-          </div>
-          <div className={styled.title_name} style={{ textAlign: "center" }}>
-            {"Name"}
-          </div>
-          <div style={{ textAlign: "center" }}>{"Price"}</div>
-          <div style={{ textAlign: "center" }} className={styled.market}>
-            {"Market Cap"}
-          </div>
-          <div style={{ textAlign: "center" }} className={styled.vwam}>
-            {"VWAP(24Hr)"}
-          </div>
-          <div style={{ textAlign: "center" }} className={styled.supply}>
-            {"Supply"}
-          </div>
-          <div style={{ textAlign: "center" }} className={styled.volume}>
-            {"Volume(24Hr)"}
-          </div>
-          <div style={{ textAlign: "center" }} className={styled.change}>
-            {"24Hr"}
-          </div>
-        </div>
-        {data.map((ele) => (
-          <div className={`${xyz(ele.isBig)} ${styled.dashboard_data}`}>
-            <div>{ele.rank}</div>
-            <div style={{ width: "300px" }} className={styled.name_section}>
-              <img
-                src={`https://assets.coincap.io/assets/icons/${ele.symbol.toLowerCase()}%402x.png`}
-                alt={ele.name}
-              />
-              <span>{ele.name}</span>
+    <div>
+      <div className={styled.dashboard_container}>
+        <div>
+          <div className={styled.dashboard_data}>
+            <div onClick={sortData}> {"Rank"}</div>
+            <div className={styled.title_name} style={{ textAlign: "center" }}>
+              {"Name"}
             </div>
-            <div>${(+ele.priceUsd).toFixed(2)}</div>
-            <div className={styled.market}>
-              ${convertToInternationalCurrencySystem(+ele.marketCapUsd)}
+            <div style={{ textAlign: "center" }}>{"Price"}</div>
+            <div style={{ textAlign: "center" }} className={styled.market}>
+              {"Market Cap"}
             </div>
-            <div className={styled.vwam}>${(+ele.vwap24Hr).toFixed(2)}</div>
-            <div className={styled.supply}>
-              {convertToInternationalCurrencySystem(ele.supply)}
+            <div style={{ textAlign: "center" }} className={styled.vwam}>
+              {"VWAP(24Hr)"}
             </div>
-            <div className={styled.volume}>
-              ${convertToInternationalCurrencySystem(ele.volumeUsd24Hr)}
+            <div style={{ textAlign: "center" }} className={styled.supply}>
+              {"Supply"}
             </div>
-            <div className={ele.changePercent24Hr[0] !== "-" ? "green" : "red"}>
-              <div className={styled.change}>
-                {(+ele.changePercent24Hr).toFixed(3)}%
+            <div style={{ textAlign: "center" }} className={styled.volume}>
+              {"Volume(24Hr)"}
+            </div>
+            <div style={{ textAlign: "center" }} className={styled.change}>
+              {"24Hr"}
+            </div>
+          </div>
+          {data.map((ele) => (
+            <div className={`${xyz(ele.isBig)} ${styled.dashboard_data}`}>
+              <div>{ele.rank}</div>
+              <div style={{ width: "300px" }} className={styled.name_section}>
+                <img
+                  src={`https://assets.coincap.io/assets/icons/${ele.symbol.toLowerCase()}%402x.png`}
+                  alt={ele.name}
+                />
+                <span>{ele.name}</span>
+              </div>
+              <div>${(+ele.priceUsd).toFixed(2)}</div>
+              <div className={styled.market}>
+                ${convertToInternationalCurrencySystem(+ele.marketCapUsd)}
+              </div>
+              <div className={styled.vwam}>${(+ele.vwap24Hr).toFixed(2)}</div>
+              <div className={styled.supply}>
+                {convertToInternationalCurrencySystem(ele.supply)}
+              </div>
+              <div className={styled.volume}>
+                ${convertToInternationalCurrencySystem(ele.volumeUsd24Hr)}
+              </div>
+              <div
+                className={ele.changePercent24Hr[0] !== "-" ? "green" : "red"}
+              >
+                <div className={styled.change}>
+                  {(+ele.changePercent24Hr).toFixed(3)}%
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
+        
       </div>
       <div className={styled.bottom_button}>
-        <button onClick={viweMore} className="button">
-          View More
-        </button>
-      </div>
+          <button onClick={viweMore} className="button">
+            View More
+          </button>
+        </div>
     </div>
   );
 };
