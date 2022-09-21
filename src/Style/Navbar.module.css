@@ -16,26 +16,28 @@
   margin-top: 3px;
   color: #4d4c4c;
 }
+
 .icon {
   margin-top: -5px;
 }
+
 .search_container {
   display: flex;
   gap: 20px;
   cursor: pointer;
 }
+
 .inputField {
   position: absolute;
-  top: 20px;
+  top: 10px;
   left: 50%;
   display: flex;
   height: 30px;
   cursor: pointer;
-  /* background-color: red; */
   width: 200px;
   border-radius: 5px;
-  border: 1px solid black;
 }
+
 .inputField > img {
   margin-top: -2px;
   padding-top: 2px;
@@ -44,6 +46,7 @@
   cursor: pointer;
   border-radius: 50%;
 }
+
 .inputField > input {
   border-radius: 5px;
   height: 27px;
@@ -51,9 +54,6 @@
 }
 
 @media screen and (max-width: 1400px) {
-  body {
-    background-color: lightgreen;
-  }
   .Navbar_container {
     gap: 18%;
   }
@@ -62,9 +62,6 @@
   }
 }
 @media screen and (max-width: 1100px) {
-  body {
-    background-color: green;
-  }
   .Navbar_container {
     gap: 13%;
   }
@@ -80,9 +77,6 @@
 }
 
 @media screen and (max-width: 768px) {
-  body {
-    background-color: red;
-  }
   .Navbar_container {
     gap: 3%;
   }
@@ -97,9 +91,6 @@
   }
 }
 @media screen and (max-width: 400px) {
-  body {
-    background-color: blue;
-  }
   .Navbar_container {
     gap: 5%;
   }

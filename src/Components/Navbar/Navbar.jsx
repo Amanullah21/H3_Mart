@@ -4,6 +4,7 @@ import Logo from "../../Icon/Logo.PNG";
 import searcg from "../../Icon/Search.PNG";
 import setting from "../../Icon/setting.PNG";
 import "../../Style/Globel.css"
+import AutoSearch from "../AutoSearch";
 const Navbar = () => {
   const [inputField, setInputField] = useState(false);
 
@@ -26,8 +27,8 @@ const Navbar = () => {
         <div>
           {inputField === true ? (
             <div className={styled.inputField}>
-              <input type="text" />
-              <img src={searcg} placeholder="Enter Currency" alt="Search" onClick={searchField} />
+              <AutoSearch />
+              {/* <img src={searcg} placeholder="Enter Currency" alt="Search" onClick={searchField} /> */}
             </div>
           ) : (
             <img src={searcg} alt="Search"  onClick={() =>setInputField(!inputField)}/>
