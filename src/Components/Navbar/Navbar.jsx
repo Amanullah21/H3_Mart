@@ -8,9 +8,7 @@ import AutoSearch from "../AutoSearch";
 const Navbar = () => {
   const [inputField, setInputField] = useState(false);
 
-  const searchField = () => {
-    console.log("123");
-  };
+
   return (
     <div className={styled.Navbar_container}>
       <div className={styled.coin_Section}>

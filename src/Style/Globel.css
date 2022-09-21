@@ -15,7 +15,6 @@ body {
   color: white;
   padding: 0px 20px;
   margin-top: -5px;
-  transition: transform 0.2s ease 0s;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 15px -3px;
   font-weight: 700;
   text-align: center;
@@ -23,8 +22,7 @@ body {
   cursor: pointer;
 }
 .button:hover {
-  background-color: aliceblue;
-  color: black;
+  background-color:#23e49a;
 }
 .special_effact_green {
   transition: background 0.35s ease 0s;
